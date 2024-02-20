@@ -4,9 +4,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CalculatorServiceImpl implements CalculatorService {
-    public String helloCalculator() {
-        return "Добро пожаловать в калькулятор";
-    }
 
     public String answerHelloCalculator() {
         return "Добро пожаловать в калькулятор";
@@ -25,8 +22,9 @@ public class CalculatorServiceImpl implements CalculatorService {
     }
 
     public String divideCalculator(int num1, int num2) {
-        if (num1 == 0 || num2 == 0) {
-            return "На ноль делить нельзя";
+        if (num2 == 0) {
+            throw new IllegalArgumentException();
+
         }
         return num1 + " / " + num2 + " = " + (num1 / num2);
     }

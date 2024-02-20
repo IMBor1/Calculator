@@ -1,7 +1,6 @@
 package pro.sky.calculator;
 
 public interface CalculatorService {
-    String helloCalculator();
 
     String answerHelloCalculator();
 
